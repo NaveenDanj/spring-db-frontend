@@ -39,7 +39,7 @@
 
     <div class="mainContainer">
 
-      asd
+      <DashboardPage />
 
 
     </div>
@@ -48,21 +48,23 @@
 </template>
 
 <script>
+import DashboardPage from "./Dashboard/DashboardPage.vue";
 export default {
-  name: "Home",
-  data() {
-    return {
-      drawer : true,
-      items: [
-        { title: "Dashboard", icon: "mdi-view-dashboard" },
-        { title: "Backups", icon: "mdi-image" },
-        { title: "App Manager", icon: "mdi-help-box" },
-        { title: "Users", icon: "mdi-help-box" },
-        { title: "Instance", icon: "mdi-help-box" },
-      ],
-      right: null,
-    };
-  },
+    name: "Home",
+    data() {
+        return {
+            drawer: true,
+            items: [
+                { title: "Dashboard", icon: "mdi-view-dashboard" },
+                { title: "Backups", icon: "mdi-image" },
+                { title: "App Manager", icon: "mdi-help-box" },
+                { title: "Users", icon: "mdi-help-box" },
+                { title: "Instance", icon: "mdi-help-box" },
+            ],
+            right: null,
+        };
+    },
+    components: { DashboardPage }
 };
 </script>
 
@@ -70,7 +72,8 @@ export default {
 
 .mainContainer{
   background-color : #010203;
-  min-height : 100vh
+  min-height : 100vh;
+  padding : 20px;
 }
 
 
