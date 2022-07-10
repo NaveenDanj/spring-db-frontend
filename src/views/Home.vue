@@ -36,6 +36,14 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
+    <div class="mainContainer">
+
+      asd
+
+
+    </div>
+
   </div>
 </template>
 
@@ -57,3 +65,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.mainContainer{
+  background-color : #010203;
+  min-height : 100vh
+}
+
+
+</style>
