@@ -3,6 +3,7 @@
     <div>
 
         <WelcomeBlock />
+        <ServerDetailBlock />
 
     </div>
 
@@ -11,12 +12,14 @@
 
 <script>
 import WelcomeBlock from '../../components/Dashboard/WelcomeBlock.vue'
+import ServerDetailBlock from '../../components/Dashboard/ServerDetailBlock.vue'
 
 
 export default {
     components : {
-        WelcomeBlock
-    }
+    WelcomeBlock,
+    ServerDetailBlock
+}
 }
 </script>
 

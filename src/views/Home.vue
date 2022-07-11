@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar app color="#010203" dark elevation="0">
-        <v-btn fab small class="mr-5" @click="() => drawer = !drawer">
+        <v-btn text fab small class="mr-5" @click="() => drawer = !drawer">
           <v-icon>mdi-menu</v-icon>
         </v-btn>
       <div class="align-center">
@@ -56,10 +56,10 @@ export default {
             drawer: true,
             items: [
                 { title: "Dashboard", icon: "mdi-view-dashboard" },
-                { title: "Backups", icon: "mdi-image" },
-                { title: "App Manager", icon: "mdi-help-box" },
-                { title: "Users", icon: "mdi-help-box" },
-                { title: "Instance", icon: "mdi-help-box" },
+                { title: "Backups", icon: "mdi-upload" },
+                { title: "App Manager", icon: "mdi-application-braces-outline " },
+                { title: "Users", icon: "mdi-account" },
+                { title: "Instance", icon: "mdi-desktop-classic " },
             ],
             right: null,
         };
