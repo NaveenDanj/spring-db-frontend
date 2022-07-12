@@ -24,7 +24,7 @@
       <v-divider></v-divider>
 
       <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item v-for="item in items" :key="item.title" link @click="handleNavigate(item)">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -51,9 +51,10 @@
     </v-navigation-drawer>
 
     <div class="mainContainer">
-      <DashboardPage />
+      <DashboardPage v-if="active == 'Dashboard' " />
+      <Backup v-if="active == 'Backups' " />
 
-      <v-footer color="#080E15" class="mt-10" dark>
+      <!-- <v-footer color="#080E15" class="mt-10" dark>
         <v-col cols="12" class="d-flex justify-space-between" >
 
           <div class="text-left">
@@ -66,7 +67,7 @@
           </div>
 
         </v-col>
-      </v-footer>
+      </v-footer> -->
 
     </div>
 
@@ -75,22 +76,33 @@
 
 <script>
 import DashboardPage from "./Dashboard/DashboardPage.vue";
+import Backup from "./Dashboard/Backup.vue";
 export default {
   name: "Home",
   data() {
     return {
       drawer: true,
+      active : "Dashboard",
       items: [
-        { title: "Dashboard", icon: "mdi-view-dashboard" },
+        { title: "Dashboard", icon: "mdi-view-dashboard"},
         { title: "Backups", icon: "mdi-upload" },
-        { title: "App Manager", icon: "mdi-application-braces-outline " },
-        { title: "Users", icon: "mdi-account" },
-        { title: "Instance", icon: "mdi-desktop-classic " },
+        { title: "App Manager", icon: "mdi-application-braces-outline"},
+        { title: "Users", icon: "mdi-account" , to : 'Users' },
+        { title: "Instance", icon: "mdi-desktop-classic "},
       ],
       right: null,
     };
   },
-  components: { DashboardPage },
+  components: { DashboardPage, Backup },
+
+  methods : {
+
+    handleNavigate(item) {
+      this.active = item.title;
+    },
+
+  }
+
 };
 </script>
 
