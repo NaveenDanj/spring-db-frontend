@@ -34,6 +34,20 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+
+      <div style="position: fixed; bottom: 0; width: 100%; " class="pa-5" rounded>
+        
+        <div style="background-color : #161635; height : 250px; border-radius: 10px;" >
+          <img src="https://templates.iqonic.design/server360/html-dark/images/page-img/side-bkg.png" style="width : 130px; position: relative; top: -40px; left : 10px;" />
+          <div style="margin-top : -40px;" class="pa-2 white--text">
+            <h3 style="margin-bottom : 15px;">Upgrade to PRO</h3>
+            <label>Become a pro user & enjoy more.</label>
+            <v-btn class="mt-5 black--text" color="white" dark block>View More</v-btn>
+          </div>
+        </div>
+
+      </div>
+
     </v-navigation-drawer>
 
     <div class="mainContainer">
