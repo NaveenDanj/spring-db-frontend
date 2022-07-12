@@ -3,8 +3,7 @@
     <v-col cols="12" md="12">
       <v-card color="#080E15" dark>
         <v-card-text>
-
-            <h2>Instanse Traffic Source</h2>
+          <h2>Instanse Traffic Source</h2>
 
           <v-sparkline
             :labels="labels"

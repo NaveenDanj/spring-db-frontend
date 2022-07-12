@@ -5,6 +5,7 @@
         <WelcomeBlock />
         <ServerDetailBlock />
         <ServerBusyGraph />
+        <ServerUserBlock />
 
     </div>
 
@@ -15,13 +16,15 @@
 import WelcomeBlock from '../../components/Dashboard/WelcomeBlock.vue'
 import ServerDetailBlock from '../../components/Dashboard/ServerDetailBlock.vue'
 import ServerBusyGraph from '../../components/Dashboard/ServerBusyGraph.vue'
+import ServerUserBlock from '../../components/Dashboard/ServerUserBlock.vue'
 
 
 export default {
     components : {
     WelcomeBlock,
     ServerDetailBlock,
-    ServerBusyGraph
+    ServerBusyGraph,
+    ServerUserBlock
 }
 }
 </script>
