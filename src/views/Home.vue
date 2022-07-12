@@ -53,7 +53,7 @@
     <div class="mainContainer">
       <DashboardPage v-if="active == 'Dashboard' " />
       <Backup v-if="active == 'Backups' " />
-
+      <AppManager v-if="active == 'App Manager' " />
       <!-- <v-footer color="#080E15" class="mt-10" dark>
         <v-col cols="12" class="d-flex justify-space-between" >
 
@@ -77,6 +77,7 @@
 <script>
 import DashboardPage from "./Dashboard/DashboardPage.vue";
 import Backup from "./Dashboard/Backup.vue";
+import AppManager from "./Dashboard/AppManager.vue";
 export default {
   name: "Home",
   data() {
@@ -93,7 +94,7 @@ export default {
       right: null,
     };
   },
-  components: { DashboardPage, Backup },
+  components: { DashboardPage, Backup, AppManager },
 
   methods : {
 
