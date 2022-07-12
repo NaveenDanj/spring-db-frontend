@@ -25,7 +25,7 @@
               v-for="(index, item) in [1, 2, 3, 4, 5, 6, 7, 8, 9]"
               :key="index"
             >
-              <v-card style="cursor: pointer">
+              <v-card style="cursor: pointer" @click="handleOpenSettingsDialog">
                 <div
                   style="
                     width: 100%;
@@ -67,15 +67,26 @@
         </div>
       </v-card-text>
     </v-card>
+
+    <SelectBackupDialog :dialog="openSettingDialog" @close="openSettingDialog = false" />
+
   </div>
 </template>
 
 <script>
+import SelectBackupDialog from '../Dialog/Backup/SelectBackupDialog.vue';
 export default {
-  data() {
-    return {
-      page : 1
-    };
-  },
+    data() {
+        return {
+            page: 1,
+            openSettingDialog: false,
+        };
+    },
+    methods: {
+        handleOpenSettingsDialog() {
+            this.openSettingDialog = true;
+        }
+    },
+    components: { SelectBackupDialog }
 };
 </script>

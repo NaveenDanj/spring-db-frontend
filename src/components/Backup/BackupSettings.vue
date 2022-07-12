@@ -87,6 +87,7 @@
             <v-btn color="red"  rounded>
                 Cancel
             </v-btn>
+            <SelectBackupDialog />
         </div>
 
       </v-form>
@@ -95,10 +96,12 @@
 </template>
 
 <script>
+import SelectBackupDialog from '../Dialog/Backup/SelectBackupDialog.vue';
 export default {
-  data: () => ({
-    items: ["Dog Photos", "Cat Photos", "", "Potatoes", "Carrots"],
-    model: ["Carrots"],
-  }),
+    data: () => ({
+        items: ["Dog Photos", "Cat Photos", "", "Potatoes", "Carrots"],
+        model: ["Carrots"],
+    }),
+    components: { SelectBackupDialog }
 };
 </script>
