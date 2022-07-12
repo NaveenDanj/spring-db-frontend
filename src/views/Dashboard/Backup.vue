@@ -34,7 +34,7 @@
               <v-divider />
 
               <v-list dense nav class="mt-2" color="#080E15">
-                <v-list-item v-for="item in settings" :key="item.title" link>
+                <v-list-item v-for="item in settings" :key="item.title" link @click="handleNavigateSettings(item)">
                   <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
                   </v-list-item-icon>
@@ -50,7 +50,8 @@
       </v-col>
 
       <v-col cols="12" md="8" style="min-height: 100%">
-        <AllBackups />
+        <AllBackups v-if="activeSettings == 'All Backups' " />
+        <BackupSettings v-if="activeSettings == 'Backup Settings' " />
       </v-col>
     </v-row>
   </div>
@@ -58,6 +59,7 @@
 
 <script>
 import AllBackups from "../../components/Backup/AllBackups.vue";
+import BackupSettings from "../../components/Backup/BackupSettings.vue";
 export default {
     data() {
         return {
@@ -73,8 +75,17 @@ export default {
                 { title: "Backup Settings", icon: "mdi-cog-outline " },
             ],
             page: 1,
+            activeSettings : 'All Backups'
         };
     },
-    components: { AllBackups }
+    components: { AllBackups, BackupSettings },
+
+    methods : {
+
+        handleNavigateSettings(item){
+            this.activeSettings = item.title
+        }
+
+    }
 };
 </script>

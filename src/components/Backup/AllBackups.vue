@@ -16,8 +16,6 @@
       <v-card-text>
         <h2 class="white--text">All Backups</h2>
 
-        <div></div>
-
         <div class="mt-5">
           <v-row>
             <v-col
