@@ -56,6 +56,7 @@
       <AppManager v-if="active == 'App Manager' " />
       <User v-if="active == 'Users' " />
       <Instance v-if="active == 'Instance' " />
+      <DatabaseVisualizer />
 
       <!-- <v-footer color="#080E15" class="mt-10" dark>
         <v-col cols="12" class="d-flex justify-space-between" >
@@ -83,6 +84,7 @@ import Backup from "./Dashboard/Backup.vue";
 import AppManager from "./Dashboard/AppManager.vue";
 import User from "./Dashboard/User.vue";
 import Instance from "./Dashboard/Instance.vue";
+import DatabaseVisualizer from "./Dashboard/DatabaseVisualizer.vue";
 
 export default {
   name: "Home",
@@ -95,12 +97,13 @@ export default {
         { title: "Backups", icon: "mdi-upload" },
         { title: "App Manager", icon: "mdi-application-braces-outline"},
         { title: "Users", icon: "mdi-account" , to : 'Users' },
+        { title: "Visualizer", icon: "mdi-database-eye"},
         { title: "Instance", icon: "mdi-desktop-classic "},
       ],
       right: null,
     };
   },
-  components: { DashboardPage, Backup, AppManager, User, Instance },
+  components: { DashboardPage, Backup, AppManager, User, Instance, DatabaseVisualizer },
 
   methods : {
 
