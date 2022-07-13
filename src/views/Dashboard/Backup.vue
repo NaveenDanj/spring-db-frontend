@@ -52,6 +52,7 @@
       <v-col cols="12" md="8" style="min-height: 100%">
         <AllBackups v-if="activeSettings == 'All Backups' " />
         <BackupSettings v-if="activeSettings == 'Backup Settings' " />
+        <ErrorLog v-if="activeSettings == 'Error Log' " />
       </v-col>
     </v-row>
   </div>
@@ -60,6 +61,7 @@
 <script>
 import AllBackups from "../../components/Backup/AllBackups.vue";
 import BackupSettings from "../../components/Backup/BackupSettings.vue";
+import ErrorLog from "../../components/Backup/ErrorLog.vue";
 export default {
     data() {
         return {
@@ -73,12 +75,13 @@ export default {
             settings: [
                 { title: "All Backups", icon: "mdi-folder-table" },
                 { title: "Backup Settings", icon: "mdi-cog-outline " },
+                { title: "Error Log", icon: "mdi-math-log" },
             ],
             page: 1,
             activeSettings : 'All Backups'
         };
     },
-    components: { AllBackups, BackupSettings },
+    components: { AllBackups, BackupSettings, ErrorLog },
 
     methods : {
 
