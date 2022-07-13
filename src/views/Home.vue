@@ -55,6 +55,7 @@
       <Backup v-if="active == 'Backups' " />
       <AppManager v-if="active == 'App Manager' " />
       <User v-if="active == 'Users' " />
+      <Instance v-if="active == 'Instance' " />
 
       <!-- <v-footer color="#080E15" class="mt-10" dark>
         <v-col cols="12" class="d-flex justify-space-between" >
@@ -81,6 +82,7 @@ import DashboardPage from "./Dashboard/DashboardPage.vue";
 import Backup from "./Dashboard/Backup.vue";
 import AppManager from "./Dashboard/AppManager.vue";
 import User from "./Dashboard/User.vue";
+import Instance from "./Dashboard/Instance.vue";
 
 export default {
   name: "Home",
@@ -98,7 +100,7 @@ export default {
       right: null,
     };
   },
-  components: { DashboardPage, Backup, AppManager, User },
+  components: { DashboardPage, Backup, AppManager, User, Instance },
 
   methods : {
 
