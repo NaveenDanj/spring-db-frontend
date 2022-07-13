@@ -56,7 +56,7 @@
       <AppManager v-if="active == 'App Manager' " />
       <User v-if="active == 'Users' " />
       <Instance v-if="active == 'Instance' " />
-      <DatabaseVisualizer />
+      <DatabaseVisualizer v-if="active == 'Visualizer' " />
 
       <!-- <v-footer color="#080E15" class="mt-10" dark>
         <v-col cols="12" class="d-flex justify-space-between" >

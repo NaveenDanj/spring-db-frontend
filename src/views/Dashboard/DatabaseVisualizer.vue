@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-row style="min-height: 80vh">
-      <v-col cols="12" md="4" style="min-height: 100%">
+      <v-col cols="12" md="3" style="min-height: 100%">
         <v-card color="#080E15" dark style="height: 100%">
           <v-card-text class="pa-5">
             <div>
@@ -34,14 +34,15 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="8" style="min-height: 100%"> </v-col>
+      <v-col cols="12" md="9" style="min-height: 100%">
+        <TableData />
+      </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
-import AllBackups from "../../components/Backup/AllBackups.vue";
-import BackupSettings from "../../components/Backup/BackupSettings.vue";
+import TableData from "../../components/Visualizer/TableData.vue";
 export default {
   data() {
     return {
@@ -54,10 +55,9 @@ export default {
       ],
 
       page: 1,
-      activeSettings: "All Backups",
     };
   },
-  components: { AllBackups, BackupSettings },
+  components: {TableData },
 
   methods: {
     handleNavigateSettings(item) {
