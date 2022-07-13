@@ -25,6 +25,11 @@ const routes = [
     name: 'ResetPassword',
     component: () => import('../views/Auth/ResetPassword/ResetPassword.vue')
   },
+  {
+    path: '/resetsuccess',
+    name: 'ResetSuccess',
+    component: () => import('../views/Auth/ResetPassword/Success.vue')
+  },
 ]
 
 const router = new VueRouter({

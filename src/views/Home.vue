@@ -13,7 +13,7 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <v-navigation-drawer app v-model="drawer" dark color="#010203">
+    <v-navigation-drawer width="290" app v-model="drawer" dark color="#010203">
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6"> SpringDB </v-list-item-title>
