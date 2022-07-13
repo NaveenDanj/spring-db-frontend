@@ -25,9 +25,7 @@
                 <v-icon>mdi-file-export-outline</v-icon>
               </v-btn>
 
-              <v-btn dark text>
-                <v-icon>mdi-cog-outline</v-icon>
-              </v-btn>
+              <EditAppDialog />
 
             </template>
 
@@ -44,6 +42,7 @@
 
 <script>
 import AddAppManagerDialog from "../../components/Dialog/AppManager/AddAppManagerDialog.vue";
+import EditAppDialog from "../../components/Dialog/AppManager/EditAppDialog.vue";
 export default {
     data() {
         return {
@@ -102,6 +101,6 @@ export default {
             ],
         };
     },
-    components: { AddAppManagerDialog }
+    components: { AddAppManagerDialog, EditAppDialog }
 };
 </script>
