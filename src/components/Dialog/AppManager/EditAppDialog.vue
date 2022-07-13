@@ -9,7 +9,7 @@
 
     <v-card color="#080E15">
       <v-toolbar color="#161635" elevation="0">
-        <v-toolbar-title>Add new App</v-toolbar-title>
+        <v-toolbar-title>Edit App details</v-toolbar-title>
         <v-spacer />
         <v-btn fab text @click="dialog = false">
           <v-icon>mdi-close</v-icon>

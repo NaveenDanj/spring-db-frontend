@@ -21,7 +21,7 @@
 
             <template v-slot:[`item.action`]="{ }">
 
-              <EditAppDialog />
+              <EditUserDialog />
 
             </template>
 
@@ -38,8 +38,8 @@
 
 <script>
 import AddAppManagerDialog from "../../components/Dialog/AppManager/AddAppManagerDialog.vue";
-import EditAppDialog from "../../components/Dialog/AppManager/EditAppDialog.vue";
 import AddUserDialog from "../../components/Dialog/User/AddUserDialog.vue";
+import EditUserDialog from "../../components/Dialog/User/EditUserDialog.vue";
 export default {
     data() {
         return {
@@ -74,6 +74,6 @@ export default {
             ],
         };
     },
-    components: { AddAppManagerDialog, EditAppDialog, AddUserDialog }
+    components: { AddAppManagerDialog , AddUserDialog, EditUserDialog }
 };
 </script>
