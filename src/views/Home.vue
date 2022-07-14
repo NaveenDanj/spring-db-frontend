@@ -11,6 +11,7 @@
       </div>
 
       <v-spacer></v-spacer>
+      <WorkspacePopover />
     </v-app-bar>
 
     <v-navigation-drawer width="290" app v-model="drawer" dark color="#010203">
@@ -85,6 +86,7 @@ import AppManager from "./Dashboard/AppManager.vue";
 import User from "./Dashboard/User.vue";
 import Instance from "./Dashboard/Instance.vue";
 import DatabaseVisualizer from "./Dashboard/DatabaseVisualizer.vue";
+import WorkspacePopover from "../components/Dashboard/WorkspacePopover.vue";
 
 export default {
   name: "Home",
@@ -103,7 +105,7 @@ export default {
       right: null,
     };
   },
-  components: { DashboardPage, Backup, AppManager, User, Instance, DatabaseVisualizer },
+  components: { DashboardPage, Backup, AppManager, User, Instance, DatabaseVisualizer, WorkspacePopover },
 
   methods : {
 
